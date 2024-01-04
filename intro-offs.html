@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Offs</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="learn.html">Learn</a></li>\
+                        <li class="nav-item"><a class="nav-link" href="ctfs.html">CTFs walkthorugh</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://gtfobins.github.io/">GTFO bins</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="card text-center">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">What is Offesnsive Security?</h5>
+              <p class="card-text">In short, offensive security is the process of breaking into computer systems, exploiting software bugs, and finding loopholes in applications to gain unauthorized access to them. <br>
+                To beat a hacker, you need to behave like a hacker, finding vulnerabilities and recommending patches before a cybercriminal does! <br>
+                On the flip side, there is also defensive security, which is the process of protecting an organization's network and computer systems by analyzing and securing any potential digital threats <br>
+                
+                In a defensive cyber role, you could be investigating infected computers or devices to understand how it was hacked, tracking down cybercriminals, or monitoring infrastructure for malicious activity.</p>
+              
+            </div>
+            <div class="card-footer text-body-secondary">
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header text-center">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">Example Attack</h5>
+              <p class="text-center"> We will use a command-line application called "GoBuster" to brute-force FakeBank's website to find hidden directories and pages. GoBuster will take a list of potential page or directory names and tries accessing a website with each of them; if the page exists, it tells you <br>
+                <h3>Step 1 - Open the therminal</h3>
+                A terminal, also known as the command-line, allows us to interact with a computer without using a graphical user interface. <br> <br>
+                <h3>Step 2 - Find hidden website pages</h3>
+                Most companies will have an admin portal page, giving their staff access to basic admin controls for day-to-day operations. For a bank, an employee might need to transfer money to and from client accounts. Often these pages are not made private, allowing attackers to find hidden pages that show, or give access to, admin controls or sensitive data. <br>
+            
+
+Type the following command into the terminal to find potentially hidden pages on FakeBank's website using GoBuster (a command-line security application). <br>
+<code>gobuster -u http://fakebank.com -w wordlist.txt dir</code>
+The command will run and show you an output similar to this:
+                <pre class="bg-dark text-white " tabindex="0">           <code class=" language-markup">
+ubuntu@hacker:~/Desktop$ gobuster -u http://fakebank.com -w wordlist.txt dir
+=====================================================
+Gobuster v2.0.1
+=====================================================
+[+] Mode         : dir
+[+] Url/Domain   : http://fakebank.com/
+[+] Threads      : 10
+[+] Wordlist     : wordlist.txt
+[+] Status codes : 200,204,301,302,307,403
+[+] Timeout      : 10s
+=====================================================
+2022/04/11 18:23:28 Starting gobuster
+=====================================================
+/images (Status: 301)
+/bank-transfer(Status: 200)
+=====================================================
+2022/04/11 18:23:38 Finished
+=====================================================
+                </code>
+                        </pre>
+                        In the command above, -u is used to state the website we're scanning, -w takes a list of words to iterate through to find hidden pages. <br>
+
+                        You will see that GoBuster scans the website with each word in the list, finding pages that exist on the site. GoBuster will have told you the pages it found in the list of page/directory names (indicated by Status: 200).</p>
+              
+            </div>
+            <div class="card-footer text-body-secondary">
+              
+            </div>
+          </div>
+
+          <div class="card text-center">
+            <div class="card-header">
+              <h3>Step 3 - Hack the Bank</h3>
+            </div>
+            <div class="card-body">
+              
+              <p class="card-text">You should have found a secret bank transfer page that allows you to transfer money between accounts at the bank (/bank-transfer). Type the hidden page into the FakeBank website on the machine. <br> This page allows an attacker to steal money from any bank account, which is a critical risk for the bank. As an ethical hacker, you would (with permission) find vulnerabilities in their application and report them to the bank to fix before a hacker exploits them. <br> <br> <br></p>
+              
+            </div>
+            <div class="card-footer text-body-secondary">
+              
+            </div>
+          </div>
+          
+
+          
+        <!-- Footer-->
+        <footer class="py-3 bg-dark fixed-bottom">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy;  <a href="https://github.com/Codru1/">Codru</a>&<a href="https://github.com/starstalker-awe/">Trevor Yates</a></p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
