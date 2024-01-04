@@ -1,1 +1,3 @@
 # All-in-one-cyber-security
+
+Today I had posted the first part, it takes a long time to make this, I also have school that kicks my ass soooo...
